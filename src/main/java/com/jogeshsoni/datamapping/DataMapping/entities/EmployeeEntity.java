@@ -21,7 +21,7 @@ public class EmployeeEntity {
     @Column(nullable = false)
     private String name;
 
-    @OneToOne(mappedBy = "manager")
+    @OneToOne(mappedBy = "manager", cascade = CascadeType.ALL)
     @JsonIgnore
     private DepartmentEntity managedDepartment;
 
